@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin: 40px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+        }
+        #studentForm{
+            border: 4px double black;
+            padding: 20px;
+            width: fit-content;
+            background-color: rgb(248, 244, 244);
+            border-radius: 20px;
+            text-align: center;
+        }
+        #btn
+        {
+          width:100%;
+          background-color: rgb(116, 216, 230);
+          cursor :pointer;
+        }
+        .form-table{
+              border: 4px double black;
+              border-radius: 20px;
+              padding: 10px;
+              background-color: rgb(231, 219, 219);
+        }
+        .student-table{
+             border: 4px double black;
+              border-radius: 20px;
+              padding: 10px;
+              background-color: rgb(240, 228, 228);
+        }
+        .student-table th,
+        .student-table td {
+             /* border-top: 2px solid black;
+             border-bottom: 2px solid black;
+             padding: 10px; */
+             border: 1px solid black;
+    padding: 4px;
+    text-align: center;
+    font-size: 12px;
+        }
+        .student-table button{
+            background-color: red;
+        }
+        #course {
+    width: 100%;
+    box-sizing: border-box;
+}
+.student-table {
+    display: none;
+}
+
+    </style>
+</head>
+<body>
+    
+
+
+ 
+
+    <div class="container">
+
+       
+
+        <form id="studentForm">
+                <h2 >STUDENT FORM</h2>
+            <table class="form-table">
+                <tr>
+                    <th>Name</th>
+                    <td><input type="text" id="name" required></td>
+                </tr>
+
+                <tr>
+                    <th>Age</th>
+                    <td><input type="number" id="age" required></td>
+                </tr>
+
+                <tr>
+                    <th>Gender</th>
+                    <td>
+                        <input type="radio" name="gender" value="Male" required> Male
+                        <input type="radio" name="gender" value="Female"> Female
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>Course</th>
+                    <td>
+                        <select id="course">
+                            <option>JavaScript</option>
+                            <option>Python</option>
+                            <option>HTML</option>
+                            <option>CSS</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th>E-mail</th>
+                    <td><input type="email" id="email" required></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <button type="submit" id="btn" >Save</button>
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+
+        <br>
+
+        <table class="student-table">
+            <thead>
+                <tr>
+                    <th>NAME</th>
+                    <th>AGE</th>
+                    <th>COURSE</th>
+                    <th>GENDER</th>
+                    <th>EMAIL</th>
+                    <th>ACTION</th>
+                </tr>
+            </thead>
+
+            <tbody id="studentList">
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
